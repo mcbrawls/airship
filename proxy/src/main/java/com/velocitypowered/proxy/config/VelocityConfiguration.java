@@ -267,10 +267,13 @@ public class VelocityConfiguration implements ProxyConfig {
     return query.shouldQueryShowPlugins();
   }
 
+  private static final GsonComponentSerializer COMPONENT_SERIALIZER
+          = GsonComponentSerializer.builder().build();
+
   @Override
   public net.kyori.adventure.text.Component getMotd() {
     if (motdAsComponent == null) {
-      motdAsComponent = MiniMessage.miniMessage().deserialize(motd);
+      motdAsComponent = COMPONENT_SERIALIZER.deserialize(motd);
     }
     return motdAsComponent;
   }

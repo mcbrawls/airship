@@ -64,7 +64,7 @@ public enum ProtocolUtils {
           .legacyHoverEventSerializer(VelocityLegacyHoverEventSerializer.INSTANCE)
           .build();
 
-  public static final int DEFAULT_MAX_STRING_SIZE = 65536; // 64KiB
+  public static final int DEFAULT_MAX_STRING_SIZE = 65536 * 8; // 64KiB
   private static final BinaryTagType<? extends BinaryTag>[] BINARY_TAG_TYPES = new BinaryTagType[] {
       BinaryTagTypes.END, BinaryTagTypes.BYTE, BinaryTagTypes.SHORT, BinaryTagTypes.INT,
       BinaryTagTypes.LONG, BinaryTagTypes.FLOAT, BinaryTagTypes.DOUBLE,
