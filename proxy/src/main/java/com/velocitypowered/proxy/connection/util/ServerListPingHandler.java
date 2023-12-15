@@ -53,7 +53,7 @@ public class ServerListPingHandler {
     VelocityConfiguration configuration = server.getConfiguration();
     return new ServerPing(
         new ServerPing.Version(version.getProtocol(),
-            "Velocity " + ProtocolVersion.SUPPORTED_VERSION_STRING),
+            "1.20.2+"),
         new ServerPing.Players(server.getPlayerCount(), configuration.getShowMaxPlayers(),
             ImmutableList.of()),
         configuration.getMotd(),
